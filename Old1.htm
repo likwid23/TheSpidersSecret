@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spider Secrets</title>
+
+<link rel="stylesheet" type="text/css" href="../_css/game_style.css">
+<script type="text/javascript" src="../_js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../_js/game_soundPlayer.js"></script>
+
+<script type="text/javascript" src="../_js/game_multipleChoice_basic.js"></script>
+<script type="text/javascript" src="../_js/game_nextRound_button.js"></script>
+
+<script type="text/javascript" src="../_js/game_edit_tool.js"></script>
+
+
+
+<style type="text/css">
+
+body {color:#884b9e}
+
+#SpiderSecrets #round1{}
+#SpiderSecrets #round2{display:none;}
+#SpiderSecrets #round3{display:none;}
+#SpiderSecrets #round4{display:none;}
+#SpiderSecrets #round5{display:none;}
+/*#SpiderSecrets #round2{display:none;}*/
+
+#SpiderSecrets .game_stage{
+	background-image:url(img/bg_main.jpg);	
+}
+
+#SpiderSecrets .choices_container{
+	position:absolute;
+	top:43px; left:535px;
+	height:411px;	
+	width:429px;
+}
+
+#SpiderSecrets .game_choice{
+	width:433px; height:119px;
+	background-repeat:no-repeat;
+	margin-bottom:25px;
+	text-align:center;
+	font-size:21px;
+	float:left;	
+}
+
+
+
+#SpiderSecrets .choice_a{background-image:url(img/bg_sprite_choiceA.png);}
+#SpiderSecrets .choice_b{background-image:url(img/bg_sprite_choiceB.png);}
+#SpiderSecrets .choice_c{background-image:url(img/bg_sprite_choiceC.png);}
+
+#SpiderSecrets .game_checkAnswer{
+	display:block;	
+}
+
+#SpiderSecrets .game_question{
+	position:absolute;
+	top:98px; left:64px;
+	width:420px; height:76px;
+	font-size:21px;	
+}
+
+#SpiderSecrets .alignText_middle{
+	/*background-color:rgba(0,255,153,0.5);*/
+	width:370px; height:76px;
+	margin-top:33px; margin-left:44px;
+	text-align:left;	
+}
+
+.game_checkAnswer, .game_nextRound {position:absolute;top:501px;left:782px}
+
+.game_roundFeedback {
+	position:absolute;
+	top:465px; left:105px;
+	width:151px; height:128px;
+	background-image:url(img/local_sprite_roundFeedback.png);}
+
+.choice_feedback_container{
+	position:absolute;
+	top:16px; left:520px;
+}
+
+.choice_feedback {
+		display:none;
+		position:absolute;
+		top:472px;
+		left:-256px;
+		width:480px; height:82px;
+		font-size:21px;
+}
+
+.choice_feedback p{
+	display:table-cell;
+	vertical-align:middle;	
+}
+
+.game_ani_spider{
+	position:absolute;
+	width:104px; height:112px;
+	/*left:445px; top:265px;*/
+	left:325px; top:395px;
+	background-image:url(img/ani_spider.png);
+}
+
+
+.game_directions{
+	width:428px; height:193px;
+	margin-left:-214px; margin-top:-96px;
+	background-image:url(img/directions.png);
+}
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div id="SpiderSecrets" class="game_main_container"> 
+    <div id="round1" class="game_stage"> 
+    		<div class="game_question">
+            		<p>Spiders can make a thread called silk. Spiderwebs are made of silk. Silk is an amazing material. Scientists want to know how spiders make it.</p>
+            </div>
+    		<div class="choices_container">
+            		<div class="game_choice choice_a">
+                    		<div class="alignText_middle" ><p>Spider silk is strong.</p></div>
+                   	</div>
+                    <div class="game_choice choice_b choice_correct" > 
+                    		<div class="alignText_middle" ><p>Spider silk is special, and scientists<br /> want to know how spiders make it.</p></div>
+                    </div>
+                    <div class="game_choice choice_c">
+                    		<div class="alignText_middle" ><p>Spider silk has many uses. </p></div>
+                    </div>
+            </div>
+            
+            <div class="choice_feedback_container">
+           			<div class="choice_feedback"><p>Think about the article. What is the article mostly about?</p></div>
+                    <div class="choice_feedback"><p>This is what the paragraph is mostly about.</p></div>
+            		<div class="choice_feedback"><p>Think about the article. What is the article mostly about?</p></div>
+            </div>
+            <div class="game_checkAnswer purpleAnswer"></div>
+            
+    </div>
+    
+    
+    
+    <div id="round2" class="game_stage">
+    		<div class="game_question" >
+            		<p>A thread of spider silk is stronger than a steel wire of the same thickness. It is a good thing that spider silk is so strong. Spiders catch food in their webs. What would happen if their silk weren’t strong? A web would break whenever an insect flew into it! The spider would have to make a new web.</p>
+            </div>
+    		<div class="choices_container">
+            		<div class="game_choice choice_a">
+                    		<div class="alignText_middle" ><p>Spider silk is very thin.</p></div>
+                   	</div>
+                    <div class="game_choice choice_b choice_correct">
+                    		<div class="alignText_middle" ><p>Spider silk is very strong.</p></div>
+                    </div>
+                    <div class="game_choice choice_c">
+                    		<div class="alignText_middle" ><p>Spider silk is flexible. </p></div>
+                    </div>
+            </div>
+            
+            <div class="choice_feedback_container">
+             		<div class="choice_feedback"><p>Read the paragraph again. Ask yourself,<br/> “What is the paragraph mostly about?”</p></div>
+                     <div class="choice_feedback"><p>This is what the paragraph is mostly about.</p></div>
+                    <div class="choice_feedback"><p>Read the paragraph again. Ask yourself,<br/> “What is the paragraph mostly about?”</p></div>
+                   
+            </div>
+            <div class="game_checkAnswer purpleAnswer"></div>
+    </div>
+    
+    
+    <div id="round3" class="game_stage">
+    		<div class="game_question" >
+            		<p>Unlucky insects get caught when they fly into a spiderweb. The insects try to get free. The web stretches. But it doesn’t break. Spider silk is strong like steel. It is also flexible like a rubber band.</p>
+            </div>
+    		<div class="choices_container">
+            		<div class="game_choice choice_a">
+                    		<div class="alignText_middle" ><p>Scientists want to know how spiders make silk.</p></div>
+                   	</div>
+                    <div class="game_choice choice_b">
+                    		<div class="alignText_middle" ><p>Spider silk has many uses.</p></div>
+                    </div>
+                    <div class="game_choice choice_c choice_correct">
+                    		<div class="alignText_middle" ><p>Spider silk is flexible. </p></div>
+                    </div>
+            </div>
+            
+            <div class="choice_feedback_container">
+             		<div class="choice_feedback"><p>Read the paragraph again. Ask yourself,<br/> “What is the paragraph mostly about?”</p></div>
+                    <div class="choice_feedback"><p>Read the paragraph again. Ask yourself,<br/> “What is the paragraph mostly about?”</p></div>
+                    <div class="choice_feedback"><p>This is what the paragraph is mostly about.</p></div>
+            </div>
+            <div class="game_checkAnswer purpleAnswer"></div>
+    </div>
+    
+    
+    <div id="round4" class="game_stage">
+    		<div class="game_question" >
+            		<p>Spiders use silk to build webs. They use it to trap insects too. It keeps spider eggs safe. Some spiders even build silk shelters to live in.</p>
+            </div>
+    		<div class="choices_container">
+            		<div class="game_choice choice_a choice_correct">
+                    		<div class="alignText_middle" ><p>pider silk has many uses.</p></div>
+                   	</div>
+                    <div class="game_choice choice_b">
+                    		<div class="alignText_middle " ><p>Spider silk is flexible.</p></div>
+                    </div>
+                    <div class="game_choice choice_c">
+                    		<div class="alignText_middle" ><p>Spider silk keeps spider eggs safe.</p></div>
+                    </div>
+            </div>
+            
+            <div class="choice_feedback_container">
+             		<div class="choice_feedback"><p>This is what the paragraph is mostly about.</p></div>
+             		<div class="choice_feedback"><p>Read the paragraph again. Ask yourself,<br/> “What is the paragraph mostly about?”</p></div>
+                   	<div class="choice_feedback"><p>Read the paragraph again. Ask yourself,<br/> “What is the paragraph mostly about?”</p></div>
+                    
+            </div>
+            <div class="game_checkAnswer purpleAnswer"></div>
+    </div>
+    
+     <div id="round5" class="game_stage">
+    		<div class="game_question" >
+            		<p>If scientists could make a material like spider silk, it would help people build stronger things, like stronger planes. People could make flexible buildings too. These buildings would bend in the wind. They wouldn’t break. And it would all be thanks to spiders!</p>
+            </div>
+    		<div class="choices_container">
+            		<div class="game_choice choice_a choice_correct">
+                    		<div class="alignText_middle" ><p>A material like spider silk would help people.</p></div>
+                   	</div>
+                    <div class="game_choice choice_b">
+                    		<div class="alignText_middle" ><p>Scientists are trying to make stronger buildings.</p></div>
+                    </div>
+                    <div class="game_choice choice_c">
+                    		<div class="alignText_middle" ><p>Scientists want to learn how spiders survive in the wind.</p></div>
+                    </div>
+            </div>
+            
+            <div class="choice_feedback_container">
+            		<div class="choice_feedback"><p>This is what the paragraph is mostly about.</p></div>
+                    <div class="choice_feedback"><p>Read the paragraph again. Ask yourself,<br/> “What is the paragraph mostly about?”</p></div>
+                    <div class="choice_feedback"><p>Read the paragraph again. Ask yourself,<br/> “What is the paragraph mostly about?”</p></div>
+            </div>
+            
+            <div class="game_checkAnswer purpleAnswer"></div>
+    </div>
+    
+    <div class="game_ani_spider"></div>
+    <div class="game_roundFeedback"></div>
+    <div class="game_nextRound purpleAnswer"></div>
+    
+    
+    <div class="directions_container">
+       	 	<div class="directions_bg"></div>
+            <div class="game_directions">
+                    <div class="game_closeDirections"></div>
+            </div>
+	</div>
+    
+</div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(e) {
+	
+	$('.game_closeDirections').click(function(){
+				$('.directions_container').css('display', 'none');	
+	});
+	
+	
+	//---------- Add the Sounds Needed for the Game -------------//
+		
+		$(this).game_soundPlayer_add('sndright');
+		$(this).game_soundPlayer_add('sndwrong');
+		$(this).game_soundPlayer_add('eng-goodwork');
+		
+	//-----------------------------------------------------------//
+	
+	/*left:325px; top:395px;*/
+	/*left:445px; top:265px;*/
+	var spider = $('.game_ani_spider');
+	
+	var spider_ori_x = spider.position().left;
+	var spider_ori_y = spider.position().top;
+	
+	var spider_end_x = 445;
+	var spider_end_y = 265;
+	var total_rounds = $('.game_stage').length;
+	
+	console.log('ori x = ' + spider_ori_x + '  ori y = ' + spider_ori_y + '  total rounds = ' + total_rounds);
+	console.log('end x = ' + spider_end_x + '  end y = ' + spider_end_y + '  total rounds = ' + total_rounds);
+	
+	var spider_travel_x = (spider_end_x - spider_ori_x) / total_rounds ;
+	var spider_travel_y = (spider_end_y - spider_ori_y) / total_rounds ;
+	
+	var spider_cur_x = spider_ori_x;
+	var spider_cur_y = spider_ori_y;
+	
+	console.log('travel x by = ' + spider_travel_x + '   travel y by = ' + spider_travel_y);
+	
+	
+	
+	
+	//$('.game_roundFeedback').game_tool_scaleSprite(0.75);
+	
+	var choice_feedback = $('.choice_feedback');
+	
+	var btn_next = $('.game_nextRound');
+    
+	$('.game_choice').game_basic_choice({
+			onChoice:function(){
+				choice_feedback.css('display', 'none');
+			}	
+	});
+	
+	
+	$('.game_checkAnswer').game_basic_choiceCheck({
+		onRoundRight:function(){
+				spider_cur_x =	spider_cur_x + spider_travel_x;
+				spider_cur_y =	spider_cur_y + spider_travel_y;
+				
+				spider.animate({
+						left: spider_cur_x,
+						top: spider_cur_y
+					  }, 2000);
+				
+		},
+		onRoundAlways:function(){
+			choice_feedback.css('display', 'none');
+			if($(this).game_basic_choice_index != null){choice_feedback.eq($(this).game_basic_choice_index).css('display', 'table');}
+		},
+		onRoundWrong:function(){
+					$(this).game_soundPlayer_play('sndwrong');
+		},
+		onRoundOver:function(){
+					$(this).game_soundPlayer_play('sndright');
+					btn_next.css('display', 'block');		
+		},
+		onGameOver:function(){
+					$(this).game_soundPlayer_play('eng-goodwork');
+		}
+	});
+	
+	btn_next.game_nextRound_button();
+	
+});
+
+
+</script>
+
+</body>
+</html>
